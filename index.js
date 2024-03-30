@@ -12,5 +12,11 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  return tutorials.map(tutorial => {
+    // Capitalize the first letter of each word and convert the rest to lowercase
+    return tutorial.replace(/\b\w/g, firstLetter => firstLetter.toUpperCase());
+  });
 }
+
+console.log(titleCased());
+
